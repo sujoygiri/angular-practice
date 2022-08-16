@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {ProductModel} from './product.model'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'products';
+  product1 = new ProductModel("Test product", "It's a test product");
+  allProducts:ProductModel[] = [this.product1];
+
+  onAddProduct(newProduct:{productName:string,productDetail:string}){
+    this.allProducts.push({
+      productName:newProduct.productName,
+      productDetail:newProduct.productDetail,
+    });
+  }
 }

@@ -1,0 +1,11 @@
+<div class="mb-4">
+  <label for="product-name" class="form-label">Example label</label>
+  <input (input)="addProductName(pName.value)" #pName type="text" class="form-control" id="product-name" placeholder="Enter product name" required>
+</div>
+<div class="mb-4">
+  <label for="product-detail" class="form-label">Another label</label>
+  <input (input)="addProductDetail(pDetail.value)" #pDetail type="text" class="form-control" id="product-detail" placeholder="Enter product detail" required >
+</div>
+<div class="text-center">
+  <button class="btn btn-primary" (click)="onAddProduct()">Add Product</button>
+</div>
